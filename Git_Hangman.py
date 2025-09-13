@@ -35,7 +35,7 @@ def hangman():
         print('\n')
         user_input = input('Enter your suggested letter: ')
 
-        if user_input.isalpha() is True:
+        if user_input.isalpha():
             if len(user_input) == len(memorised_word) or len(user_input) == 1:
                 if user_input == memorised_word:
                     score_board = user_input
@@ -48,8 +48,9 @@ def hangman():
                                 letters_left.pop(character_index)
                         else:
                             wrong_guesses += 2
+                            break
             else:
-                print('\nCheating??? Nuh nonna work. Be gone.\n')
+                print('\nCheating??? Naa gonna work. Be gone.\n')
                 cheater = True
                 break
 
